@@ -1,6 +1,6 @@
-def listEmails():
+def listOfEmails(distroFile):
 
-    f = open(r"C:\Users\bgeneral\Desktop\email.txt", "r")
+    f = open(distroFile, "r")
     txt = f.read()
 
     emails = []
@@ -8,9 +8,8 @@ def listEmails():
     while txt.find('>') != -1:
         str1 = txt.find('<')
         str2 = txt.find('>')
-        temptxt = txt[str1+1:str2]
-        # print(temptxt)
-        emails.append(temptxt)
+        tmp = txt[str1+1:str2]
+        emails.append(tmp)
         txt = txt[str2 + 1:]
 
     return emails
