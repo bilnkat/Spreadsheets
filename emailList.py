@@ -13,3 +13,6 @@ def listOfEmails(distroFile):
         txt = txt[str2 + 1:]
 
     return emails
+
+e = listOfEmails(r'C:\Users\bgeneral\Desktop\email.txt')
+print(e, file=open(r"C:\Users\bgeneral\Desktop\output.txt", "a"))
